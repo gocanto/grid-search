@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import Alert from './components/Alert';
+import Layout from './layout/Layout';
 
 new Vue({
-    components: { Alert }
+    components: { Layout }
 }).$mount('#app')

@@ -11,3 +11,21 @@ mix
     .postCss('resources/css/app.css', 'css', [
         require("tailwindcss"),
     ]);
+    // .babelConfig({
+    //     plugins: ['@babel/plugin-syntax-dynamic-import'],
+    // })
+    // .webpackConfig({
+    //     output: {
+    //         chunkFilename: 'js/chunks/[name].js?id=[chunkhash]',
+    //     }
+    // })
+    // .options({
+    //     uglify: {
+    //         parallel: 16,
+    //         cache: true,
+    //         uglifyOptions: {
+    //             mangle: true,
+    //             compress: false,
+    //         },
+    //     },
+    // });
