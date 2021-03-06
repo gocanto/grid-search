@@ -33,7 +33,69 @@
             table-class="mb-0"
             bordered
             :filter="filter"
-        ></b-table>
+        >
+
+          <template #cell(logoLocation)="data">
+            <b-img center fluid :src="data.item.logoLocation" thumbnail alt="Logo Location"></b-img>
+          </template>
+
+          <template #cell(__prices)="data">
+            <div>
+              <div>Min: {{ data.item.variableDenomPriceMinAmount }}</div>
+              <div>Max: {{ data.item.variableDenomPriceMaxAmount }}</div>
+            </div>
+          </template>
+
+          <template #cell(__identifier)="data">
+            <div>
+              <div>Id: {{ data.item.id }}</div>
+              <div>GVT-ID: {{ data.item.gvtId }}</div>
+            </div>
+          </template>
+
+          <template #cell(__description)="data">
+            <b-dropdown id="dropdown-right" right text="Manage" variant="light" size="sm">
+              <template #button-content>
+                <b-icon
+                    icon="search"
+                    aria-hidden="true"
+                ></b-icon>
+                &nbsp;See More
+              </template>
+
+              <b-dropdown-item href="#" v-b-modal="`short-desc-modal-${data.item.id}`">Short Description</b-dropdown-item>
+              <b-dropdown-item href="#" v-b-modal="`long-desc-modal-${data.item.id}`">Long Description</b-dropdown-item>
+            </b-dropdown>
+
+            <b-modal :id="`long-desc-modal-${data.item.id}`" :title="`[${data.item.name}] Long Description`">
+              <div v-html="data.item.longDescription"></div>
+            </b-modal>
+
+            <b-modal :id="`short-desc-modal-${data.item.id}`" :title="`[${data.item.name}] Short Description`">
+              <div v-html="data.item.shortDescription"></div>
+            </b-modal>
+
+            <b-modal :id="`metadata-modal-${data.item.id}`" :title="`[${data.item.name}] Metadata`">
+              <div>Type: {{ data.item.__typename }}</div>
+              <div>Voucher Type: {{ data.item.voucherTypeName }}</div>
+            </b-modal>
+          </template>
+
+          <template #cell(__external)="data">
+            <b-dropdown id="dropdown-right" right text="Manage" variant="info" size="sm">
+              <template #button-content>
+                <b-icon
+                    icon="globe"
+                    aria-hidden="true"
+                ></b-icon>
+                &nbsp;Profile
+              </template>
+              <b-dropdown-item target="_blank" :href="data.item.productUrl">See More</b-dropdown-item>
+              <b-dropdown-item target="_blank" :href="data.item.orderUrl">New Order</b-dropdown-item>
+            </b-dropdown>
+          </template>
+
+        </b-table>
       </b-overlay>
       <!-- end products list -->
 
@@ -49,81 +111,58 @@ const productsAPI = () => require('./../../../public/api/products.json').product
 export default {
   data() {
     return {
-      // perPage: 10,
-      // currentPage: 1,
-      isPending: false,
-      // editing: false,
-      // totalRows: 0,
-      // pageOptions: [10, 25, 50, 100],
+      isPending: true,
       products: [],
       filter: null,
     }
   },
   created() {
-    this.products = productsAPI()
-
-    //@todo Activate the filter
-    // this.filter = 'Game of Sultans'
+    this.fetch()
   },
 
   methods: {
+    fetch() {
+
+      // -- simulates loading data.
+      setTimeout(() => {
+        this.products = productsAPI()
+        this.isPending = false
+      }, 1000)
+
+    },
     fields() {
       return [
         {
-          key: 'id',
-          label: 'Id',
-        },
-        {
-          key: 'gvtId',
-          label: 'Gvt Id',
+          key: '__identifier',
+          label: 'Identifier',
         },
         {
           key: 'name',
           label: 'Name',
         },
         {
+          key: 'productTitle',
+          label: 'Title',
+        },
+        {
           key: 'productTagline',
           label: 'Tag Line',
-        },
-        {
-          key: 'shortDescription',
-          label: 'Short Desc',
-        },
-        {
-          key: 'longDescription',
-          label: 'Long Desc',
         },
         {
           key: 'logoLocation',
           label: 'Location',
         },
         {
-          key: 'productUrl',
-          label: 'Product URL',
+          key: '__prices',
+          label: 'Price',
         },
         {
-          key: 'voucherTypeName',
-          label: 'Voucher Type',
+          key: '__description',
+          label: 'Description',
         },
         {
-          key: 'orderUrl',
-          label: 'Order URL',
-        },
-        {
-          key: 'productTitle',
-          label: 'Title',
-        },
-        {
-          key: 'variableDenomPriceMinAmount',
-          label: 'Price Min Amount',
-        },
-        {
-          key: 'variableDenomPriceMaxAmount',
-          label: 'Price Max Amount',
-        },
-        {
-          key: '__typename',
-          label: 'Type Name',
+          key: '__external',
+          label: 'External',
         },
       ]
     },
