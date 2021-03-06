@@ -6,4 +6,5 @@ mix
     .setPublicPath('public/js')
     .version()
     .sourceMaps()
-    .extract(['vue']);
+    .extract(['vue'])
+    .options({ legacyNodePolyfills: true });
