@@ -3,3 +3,5 @@ logs
 *.log
 npm-debug.log*
 node_modules/
+public/css/
+public/js
