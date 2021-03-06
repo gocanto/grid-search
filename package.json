@@ -1,5 +1,8 @@
 {
   "devDependencies": {
-    "laravel-mix": "^6.0.13"
+    "laravel-mix": "^6.0.13",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12"
   }
 }
