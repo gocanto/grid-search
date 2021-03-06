@@ -170,11 +170,7 @@ export default {
     breadcrumb() {
       return [
         { text: 'Home', href: '#' },
-        {
-          text: 'Products',
-          active: true,
-          href: '#',
-        },
+        { text: 'Products', active: true, href: '#' },
       ]
     },
   }
