@@ -17,6 +17,25 @@
       </b-navbar>
       <!-- end nav bar -->
 
+      <!-- start input search -->
+      <b-row class="mb-3">
+        <b-col cols="4">
+
+          <b-input-group>
+
+            <b-form-input type="text" placeholder="Search..." v-model="filter"></b-form-input>
+
+            <b-input-group-append>
+              <b-input-group-text>
+                <b-icon icon="search" />
+              </b-input-group-text>
+            </b-input-group-append>
+          </b-input-group>
+
+        </b-col>
+      </b-row>
+      <!-- end input search -->
+
       <!-- start products list -->
       <b-overlay :show="isPending" rounded="sm">
         <b-table
@@ -118,6 +137,7 @@ export default {
       filter: null,
     }
   },
+
   created() {
     this.fetch()
   },
