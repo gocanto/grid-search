@@ -35,21 +35,23 @@
             :filter="filter"
         >
 
-          <template #cell(logoLocation)="data">
-            <b-img center fluid :src="data.item.logoLocation" thumbnail alt="Logo Location"></b-img>
+          <template #cell(__thumbnails)="data">
+            <div class="flex h-10 w-10">
+              <img class="h-10 w-10 rounded-full" :src="data.item.logoLocation" alt="">
+            </div>
           </template>
 
           <template #cell(__prices)="data">
-            <div>
-              <div>Min: {{ data.item.variableDenomPriceMinAmount }}</div>
-              <div>Max: {{ data.item.variableDenomPriceMaxAmount }}</div>
+            <div class="min-w-max">
+              <div><span class="font-bold">Min:</span> {{ data.item.variableDenomPriceMinAmount }}</div>
+              <div><span class="font-bold">Max:</span> {{ data.item.variableDenomPriceMaxAmount }}</div>
             </div>
           </template>
 
           <template #cell(__identifier)="data">
-            <div>
-              <div>Id: {{ data.item.id }}</div>
-              <div>GVT-ID: {{ data.item.gvtId }}</div>
+            <div class="min-w-max">
+              <div><span class="font-bold">ID:</span> {{ data.item.id }}</div>
+              <div><span class="font-bold">GVT-ID:</span> {{ data.item.gvtId }}</div>
             </div>
           </template>
 
@@ -133,6 +135,10 @@ export default {
     fields() {
       return [
         {
+          key: '__thumbnails',
+          label: '',
+        },
+        {
           key: '__identifier',
           label: 'Identifier',
         },
@@ -148,10 +154,10 @@ export default {
           key: 'productTagline',
           label: 'Tag Line',
         },
-        {
-          key: 'logoLocation',
-          label: 'Location',
-        },
+        // {
+        //   key: 'logoLocation',
+        //   label: 'Location',
+        // },
         {
           key: '__prices',
           label: 'Price',
@@ -176,3 +182,9 @@ export default {
   }
 }
 </script>
+
+<style>
+tbody {
+  font-size: small;
+}
+</style>
