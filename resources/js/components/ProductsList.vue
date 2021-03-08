@@ -127,7 +127,7 @@
 </template>
 
 <script>
-const productsAPI = () => require('./../../../api/products.json').products
+const productsAPI = () => require('./../../mock/products.json').products
 
 export default {
   data() {
