@@ -174,10 +174,6 @@ export default {
           key: 'productTagline',
           label: 'Tag Line',
         },
-        // {
-        //   key: 'logoLocation',
-        //   label: 'Location',
-        // },
         {
           key: '__prices',
           label: 'Price',
