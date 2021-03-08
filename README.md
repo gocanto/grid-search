@@ -23,4 +23,29 @@ Once you have those tools installed, you will be able to do the following:
     npm run prod #to compile the app for production
 ```    
 
-Alternatively, you would be able to download the compiled app from [here](https://github.com/gocanto/grid-search/tree/main/dist).        
+Alternatively, you would be able to download the compiled app from [here](https://github.com/gocanto/grid-search/tree/main/dist).
+After you have downloaded the `public.zip` file, you will be able to browse the products overview by clicking on the `index.html` file.
+
+## Getting started
+
+Browsing the products overview is a breeze. You just need to open the app and look around. 
+It will let you filter the products by name or description, go to a given product profile or 
+place an order for it and see a full or short description of them.
+
+## Contributing
+
+Please feel free to fork this package and contribute by submitting a pull request to enhance 
+its functionalities.
+
+## License
+
+The MIT License (MIT). Please see [License File](https://github.com/gocanto/grid-search/blob/main/LICENSE) for more information.
+
+
+# How can I thank you?
+Why not start the github repo? Share the link for this repository on Twitter? Spread the word!
+
+
+Don't forget to [follow me on twitter](https://twitter.com/gocanto)!
+
+Thanks!
