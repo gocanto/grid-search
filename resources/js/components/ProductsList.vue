@@ -26,7 +26,7 @@
             <b-form-input type="text" placeholder="Search..." v-model="filter"></b-form-input>
 
             <b-input-group-append>
-              <b-input-group-text>
+              <b-input-group-text debounce>
                 <b-icon icon="search" />
               </b-input-group-text>
             </b-input-group-append>
@@ -165,10 +165,12 @@ export default {
         {
           key: 'name',
           label: 'Name',
+          sortable: true,
         },
         {
           key: 'productTitle',
           label: 'Title',
+          sortable: true,
         },
         {
           key: 'productTagline',
