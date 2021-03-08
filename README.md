@@ -29,7 +29,7 @@ After you have downloaded the `public.zip` file, you will be able to browse the 
 ## Getting started
 
 Browsing the products overview is a breeze. You just need to open the app and look around. 
-It will let you filter the products by name or description, go to a given product profile or 
+It will let you filter the products by `name` or `title`, go to a given product profile or 
 place an order for it and see a full or short description of them.
 
 ## Contributing
