@@ -7,18 +7,24 @@ mix
     .version()
     .sourceMaps()
     .extract(['vue'])
-    .postCss('resources/css/app.css', 'css', [
+
+    .postCss('resources/c' +
+        'ss/app.css', 'css', [
         require("tailwindcss"),
     ])
+
     .babelConfig({
         plugins: ['@babel/plugin-syntax-dynamic-import'],
     })
+
     .webpackConfig({
         output: {
-            chunkFilename: "js/chunks/[id].chunk.[chunkhash].js",
+            chunkFilename: 'js/chunks/[id].chunk.[chunkhash].js',
             publicPath: ''
         }
-    }).options({
+    })
+
+    .options({
         uglify: {
             parallel: 16,
             cache: true,
