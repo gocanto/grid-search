@@ -2,6 +2,10 @@
 
 This project simulates a given e-commerce store back-office products list overview.
 
+Browsing the products overview is a breeze since the App will let you filter products 
+by `name` or `title`, visit given products profile to place an orders for them, and see a 
+full or short description of them.
+
 ## Dev Requirements
 
 To make use of this code base, you will have to install [Git](https://git-scm.com/), 
@@ -25,12 +29,6 @@ Once you have those tools installed, you will be able to do the following:
 
 Alternatively, you would be able to download the compiled app from [here](https://github.com/gocanto/grid-search/blob/main/dist/public.zip).
 After you have downloaded the `public.zip` file, you will be able to browse the products overview by clicking on the `index.html` file.
-
-## Getting started
-
-Browsing the products overview is a breeze. You just need to open the app and look around. 
-It will let you filter the products by `name` or `title`, go to a given product profile or 
-place an order for it and see a full or short description of them.
 
 ## Contributing
 
