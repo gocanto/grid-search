@@ -9,7 +9,6 @@
 </template>
 
 <script>
-//const Checkout = () => import('../components/Checkout')
 const TopBar = () => import('./TopBar');
 const ProductsList = () => import('../components/ProductsList');
 
