@@ -9,8 +9,9 @@
 </template>
 
 <script>
-import TopBar from "./TopBar";
-import ProductsList from "../components/ProductsList";
+//const Checkout = () => import('../components/Checkout')
+const TopBar = () => import('./TopBar');
+const ProductsList = () => import('../components/ProductsList');
 
 export default {
   components: {
