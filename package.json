@@ -1,5 +1,21 @@
 {
-  "private": true,
+  "license": "MIT",
+  "version": "1.0.0",
+  "author": "Gustavo Ocanto",
+  "name": "grid-search",
+  "main": "resources/js/app.js",
+  "description": "Products overview grid",
+  "homepage": "https://github.com/gocanto/google-autocomplete",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gocanto/grid-search"
+  },
+  "keywords": [
+    "vue",
+    "products",
+    "component",
+    "grid"
+  ],
   "scripts": {
     "dev": "npm run development",
     "development": "mix",

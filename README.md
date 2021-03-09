@@ -30,6 +30,30 @@ Once you have those tools installed, you will be able to do the following:
 Alternatively, you would be able to download the compiled app from [here](https://github.com/gocanto/grid-search/blob/main/dist/public.zip).
 After you have downloaded the `public.zip` file, you will be able to browse the products overview by clicking on the `index.html` file.
 
+## Compiled assets stats
+
+```bash
+┌───────────────────────────────────────────────────────────────────────────────┬───────────┐
+│                                                                          File │ Size      │
+├───────────────────────────────────────────────────────────────────────────────┼───────────┤
+│                                                                    /js/app.js │ 1.71 MiB  │
+│                                                                /js/app.js.map │ 3.42 MiB  │
+│                                                               /js/manifest.js │ 2.7 KiB   │
+│                                                           /js/manifest.js.map │ 15.1 KiB  │
+│                                                                 /js/vendor.js │ 91.9 KiB  │
+│                                                     /js/vendor.js.LICENSE.txt │ 87 bytes  │
+│                                                             /js/vendor.js.map │ 486 KiB   │
+│                                                                   css/app.css │ 4.75 KiB  │
+│                                                               css/app.css.map │ 1.9 KiB   │
+│                                   js/chunks/431.chunk.b9828a7e8ffca8af09ca.js │ 28.6 KiB  │
+│                               js/chunks/431.chunk.b9828a7e8ffca8af09ca.js.map │ 24.2 KiB  │
+│                                   js/chunks/851.chunk.0a359065491d7d8726cc.js │ 796 bytes │
+│                               js/chunks/851.chunk.0a359065491d7d8726cc.js.map │ 3 KiB     │
+│                                   js/chunks/936.chunk.0526a0ec373d03530c41.js │ 1.34 KiB  │
+│                               js/chunks/936.chunk.0526a0ec373d03530c41.js.map │ 6.49 KiB  │
+└───────────────────────────────────────────────────────────────────────────────┴───────────┘
+```
+
 ## Contributing
 
 Please feel free to fork this package and contribute by submitting a pull request to enhance 
