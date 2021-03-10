@@ -27,8 +27,11 @@ Once you have those tools installed, you will be able to do the following:
     npm run prod #to compile the app for production
 ```    
 
-Alternatively, you would be able to download the compiled app from [here](https://github.com/gocanto/grid-search/blob/main/dist/public.zip).
-After you have downloaded the `public.zip` file, you will be able to browse the products overview by clicking on the `index.html` file.
+- After the compilation process is done, you will be able to head to the `public` directory
+contained within the root folder and click on the `index.html` file to run the app.
+
+> Alternatively, you would be able to download the compiled app from [here](https://github.com/gocanto/grid-search/blob/main/dist/public.zip).
+> After you have downloaded the `public.zip` file, you will be able to browse the products overview by clicking on the `index.html` file.
 
 ## Compiled assets stats
 
